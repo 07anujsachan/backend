@@ -6,7 +6,7 @@ const { error } = require("console");
 const app = express();
 app.use(cors());
 const PORT = 4000;
-app.post("/test-speed", (req, res) => {
+app.get("/test-speed", (req, res) => {
   try {
     exec(`fast --upload --json`, (err, stdout, stderr) => {
       if (err || stderr) {
